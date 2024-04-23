@@ -16,6 +16,9 @@
 .logo{
   margin-top: -13px;
 }
+.fab{
+  margin-right: 10px;
+}
 
 .vertical-menu {
   position: fixed;
