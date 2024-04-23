@@ -1,0 +1,171 @@
+//selecting DOM items
+var menuBtn = document.querySelector(".menu-btn");
+var btnLine = document.querySelector(".btn-line");
+var menu = document.querySelector(".vertical-menu");
+var navItem = document.querySelectorAll(".nav-item");
+var nav = document.querySelector("nav");
+var scrollBtn = document.querySelector(".scroll-button a");
+var body = document.querySelector("body");
+var navBar = document.querySelector(".navbar");
+var navLinks = document.querySelectorAll(".menu1 li a");
+
+if (scrollBtn) {
+  scrollBtn.style.display = "none";
+}
+
+window.onscroll = function () {
+  if (document.documentElement.scrollTop > 20) {
+    nav.classList.add("sticky");
+    scrollBtn.style.display = "block";
+    document.getElementById("mylogo").src = "images/logo_bir.png";
+  } else {
+    nav.classList.remove("sticky");
+    scrollBtn.style.display = "none";
+    document.getElementById("mylogo").src = "images/logo_bir.png";
+  }
+};
+
+if (
+  document.getElementById("education-desc") &&
+  document.getElementById("work-desc")
+) {
+  document.getElementById("education-desc").style.display = "block";
+  document.getElementById("work-desc").style.display = "none";
+  document.getElementById("education").classList.add("currentMenu");
+  document.getElementById("work").classList.remove("currentMenu");
+}
+
+var showMenu = false;
+
+menuBtn.onclick = function () {
+  navBar.classList.add("active");
+  menuBtn.style.display = "none";
+  menuBtn.style.pointerevents = "none";
+  body.style.overflow = "hidden";
+  scrollBtn.style.pointerevents = "none";
+};
+
+function closeMenu() {
+  navBar.classList.remove("active");
+  menuBtn.style.display = "block";
+  menuBtn.style.pointerevents = "auto";
+  body.style.overflow = "auto";
+  scrollBtn.style.pointerevents = "auto";
+}
+
+for (var i = 0; i < navLinks.length; i++) {
+  navLinks[i].addEventListener("click", function () {
+    navBar.classList.remove("active");
+    //menuBtn.style.opacity = "1";
+    menuBtn.style.pointerevents = "auto";
+    body.style.overflow = "auto";
+    scrollBtn.style.pointerevents = "auto";
+  });
+}
+
+function switchVisible(id) {
+  if (id == "education") {
+    if (document.getElementById("education-desc").style.display == "none") {
+      document.getElementById("education-desc").style.display = "block";
+      document.getElementById("work-desc").style.display = "none";
+      document.getElementById("education").classList.add("currentMenu");
+      document.getElementById("work").classList.remove("currentMenu");
+    }
+  } else if (id == "work") {
+    if (document.getElementById("work-desc").style.display == "none") {
+      document.getElementById("education-desc").style.display = "none";
+      document.getElementById("work-desc").style.display = "block";
+      document.getElementById("education").classList.remove("currentMenu");
+      document.getElementById("work").classList.add("currentMenu");
+    }
+  }
+}
+
+function showDesc(id) {
+  if (id == "todoApp-menu") {
+    document.getElementById("toDoApp").style.display = "block";
+    document.getElementById("kharchaBook").style.display = "none";
+    document.getElementById("squadManagement").style.display = "none";
+  } else if (id == "kharchaBook-menu") {
+    document.getElementById("kharchaBook").style.display = "block";
+    document.getElementById("toDoApp").style.display = "none";
+    document.getElementById("squadManagement").style.display = "none";
+  } else if (id == "squadManage-menu") {
+    document.getElementById("squadManagement").style.display = "block";
+    document.getElementById("toDoApp").style.display = "none";
+    document.getElementById("kharchaBook").style.display = "none";
+  }
+}
+
+function showMenuBtn() {
+  if (menuBtn.style.display == "none") {
+    menuBtn.style.display = "block";
+  } else {
+    menuBtn.style.display = menuBtn.style.display;
+  }
+}
+
+//js for sliders
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides((slideIndex += n));
+}
+
+function currentSlide(n) {
+  showSlides((slideIndex = n));
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("demo");
+  if (n > slides.length) {
+    slideIndex = 1;
+  }
+  if (n < 1) {
+    slideIndex = slides.length;
+  }
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex - 1].style.display = "flex";
+  dots[slideIndex - 1].className += " active";
+}
+document.addEventListener("DOMContentLoaded", function() {
+  var jobTitles = ["Web Developer", "Web Designer", "Graphic Designer"];
+  var index = 0;
+  var jobTitleElement = document.getElementById('job-title');
+
+  function animateJobTitle() {
+      var jobTitle = jobTitles[index];
+      jobTitleElement.textContent = ""; // Clear previous text
+      animateTyping(jobTitle);
+  }
+
+  function animateTyping(jobTitle) {
+      jobTitleElement.classList.remove('erasing');
+      jobTitleElement.classList.add('typing');
+      jobTitleElement.textContent = jobTitle;
+      setTimeout(function() {
+          jobTitleElement.classList.remove('typing');
+          setTimeout(animateErasing, 1000); // Delay before erasing
+      }, 3000); // Duration of typing animation
+  }
+
+  function animateErasing() {
+      jobTitleElement.classList.remove('typing');
+      jobTitleElement.classList.add('erasing');
+      setTimeout(function() {
+          index = (index + 1) % jobTitles.length;
+          animateJobTitle(); // Move to the next job title
+      }, 2000); // Duration of erasing animation
+  }
+
+  // Start the animation
+  animateJobTitle();
+});

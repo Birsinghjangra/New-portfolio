@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.0.5/js/swiper.min.js"></script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.0.5/css/swiper.css" rel="stylesheet" />
+
+  <link rel="stylesheet" href="css/main.css" />
+  <link rel="stylesheet" href="css/devicon_2.13.0.devicon.min.css" />
+
+  <title>Bir Singh Jangra</title>
+</head>
+
+<body id="bg-img">
+  <!-- scroll to top -->
+  <div class="scroll-button">
+    <a href="#home"><i class="fas fa-arrow-up"></i></a>
+  </div>
+
+  <header>
+    <!-- Nav-bar section -->
+    <nav class="horizontal-menu">
+      <div class="navbar">
+        <div class="logo">
+          <a href="#"><img id="mylogo" src="images/logo_bir.png" alt="logo" /></a>
+        </div>
+
+        <ul class="menu1">
+          <li>
+            <a href="#home" class="nav-link" id="home_nav" onclick="showMenuBtn()">Home</a>
+          </li>
+          <li>
+            <a href="#about" class="nav-link" id="about_nav" onclick="showMenuBtn()">About</a>
+          </li>
+
+          <li>
+            <a href="#skills" class="nav-link" id="skills_nav" onclick="showMenuBtn()">Skills</a>
+          </li>
+
+          <li>
+            <a href="#projects" class="nav-link" id="projects_nav" onclick="showMenuBtn()">Projects</a>
+          </li>
+          <li>
+            <a href="#contact" class="nav-link" id="contact_nav" onclick="showMenuBtn()">Contact</a>
+          </li>
+          <button class="cancel-btn" onclick="closeMenu()">
+            <i class="fas fa-times"></i>
+          </button>
+        </ul>
+
+        <!-- media icons -->
+        <div class="media-icons">
+          <a href="https://www.linkedin.com/in/bir-singh-jangra/">
+            <i class="fab fa-linkedin fa-2x" aria-hidden="true" title="LinkedIn"></i> </a>&nbsp;&nbsp;
+          <a href="https://github.com/Birsinghjangra">
+            <i class="fab fa-github fa-2x" aria-hidden="true" title="Github"></i>
+          </a>
+        </div>
+      </div>
+
+      <!-- menu-buttons -->
+      <div class="menu-btn">
+        <div class="btn-line"></div>
+        <div class="btn-line"></div>
+        <div class="btn-line"></div>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Home-section -->
+  <section class="home_nav" id="home_nav">
+    <div class="home-content" id="home">
+      <h1 class="lg-heading">
+        Bir Singh <span class="secondary">Jangra</span>
+      </h1>
+      <h2 class="sm-heading" id="job-title">Web Developer</h2>
+      <div class="icons">
+        <a href="https://www.linkedin.com/in/bir-singh-jangra/">
+          <i class="fab fa-linkedin fa-2x" aria-hidden="true" title="LinkedIn"></i>
+        </a>
+        <a href="https://github.com/Birsinghjangra">
+          <i class="fab fa-github fa-2x" aria-hidden="true" title="Github"></i>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- About -section -->
+  <section class="about_nav" id="about_nav">
+    <div class="about-content" id="about">
+      <h1 class="lg-heading secondary">
+        About <span style="color: black">me</span>
+      </h1>
+      <h2 class="sm-heading" style="color: black">Let's have a glance!</h2>
+      <div class="about-info">
+        <div class="upper-about-info">
+          <img src="images/photo.jpeg" alt="Bir Singh" title="Bir Singh" class="bio-image" />
+          <div class="bio">
+            <h3><strong style="color: black">About</strong></h3>
+            <p style="color: black">
+              Hi I am Bir Singh Jangra! I have 1.5+ years of experience in web
+              technologies for building scalable web applications. I have the
+              ability to design and build responsive frontend using Angular and React.
+              Hands-on experience with HTML, CSS, JavaScript,
+              Typescript, Python, Responsive Design, Node JS, Express
+              JS. Ability to pick up and adapt to new technologies quickly and
+              deal with an ever-changing baseline
+            </p>
+          </div>
+        </div>
+
+        <div class="experience" style="color: black">
+          <div class="experience-menu">
+            <h3 id="education" onclick="switchVisible(this.id)">Education</h3>
+            <h3 id="work" onclick="switchVisible(this.id)">Experience</h3>
+          </div>
+          <div class="experience-desc">
+            <ul id="education-desc">
+              <li>
+                <h4>Bachelor Of Technology</h4>
+                <h5 style="font-style: italic">KIET Group Of Institutions</h5>
+                <p style="font-style: italic">2018 - 2022</p>
+              </li>
+            </ul>
+            <ul id="work-desc">
+              <li>
+                <h4>Full-Stack Web Developer</h4>
+                <h5 style="font-style: italic" style="font-style: italic">
+                  Atomic North Private Limited
+                </h5>
+                <p style="font-style: italic">April, 2023 - Present</p>
+              </li>
+              <li>
+                <h4>Frontend Developer</h4>
+                <h5 style="font-style: italic" style="font-style: italic">
+                  AngryBaaz Service Private Limited
+                </h5>
+                <p style="font-style: italic">June, 2022 - March, 2023</p>
+              </li>
+            </ul>
+          </div>
+          <div class="experience-resume">
+            <a href="resume/Bir_Singh_Jangra_Resume.pdf" target="_blank" role="button"
+              download="Bir_Singh_Jangra_Resume.pdf">
+              Download Resume &nbsp;<i class="fa fa-download"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills-section -->
+  <section class="skills_nav" id="skills_nav">
+    <div class="skills-content" id="skills">
+      <h1 class="lg-heading">My<span class="secondary"> Skills</span></h1>
+      <h2 class="sm-heading">Skills reflects our Knowledge..</h2>
+      <div class="skills">
+        <div>
+          <img src="icons1/HTML.png" alt="Project1" />
+        </div>
+        <div>
+          <img src="icons1/css.png" alt="Project1" />
+        </div>
+        <div>
+          <img src="icons1/js.png" alt="Project1" />
+        </div>
+        <div>
+          <img src="icons1/bootstrap.png" alt="Project1" />
+        </div>
+        <div>
+          <img src="icons1/angular.png" alt="Project1" />
+        </div>
+
+        <div>
+          <img src="icons1/React.png" alt="Project1" />
+        </div>
+        <div>
+          <img src="icons1/python.png" alt="Project1" />
+        </div>
+        <div>
+          <img src="icons1/sql.png" alt="Project1" />
+        </div>
+      </div>
+      <div class="more-skills">
+        <a href="resume/Bir_Singh_Jangra_Resume.pdf" target="_blank" role="button" download="Bir_Singh_Jangra_Resume.pdf">
+          <u>Click here for more</u>&nbsp;<span><i class="fas fa-hand-point-right"></i></span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects-section -->
+  <section class="projects_nav" id="projects_nav">
+    <div class="project-content" id="projects">
+      <h1 class="lg-heading">
+        <span style="color: black">My </span><span class="secondary">Projects</span>
+      </h1>
+      <h2 class="sm-heading" style="color: black">
+        Let's have a glance over some of my works....
+      </h2>
+
+      <!-- sliders -->
+      <div class="container">
+        <div class="mySlides">
+          <div class="numbertext">1 / 4</div>
+
+          <div class="project-photo">
+            <!-- <div class="project-photo-sub"> -->
+            <a href="https://clone-126e7.web.app">
+              <img class="demo" style="object-fit: contain" src="images/Project0.PNG" alt="Project0" /></a>
+            <!-- </div> -->
+          </div>
+          <div class="project-desc" id="googleSearch">
+            <div class="project-desc-sub">
+              <h2><b>Google Search Clone</b></h2>
+              <p>
+                A Google Search clone application made on Angular. It is used to
+                search for any query just like the google appilcation, and
+                also produces the same results as it uses google search engine
+                API for getting the results.
+                <br /><br />
+
+                Google Search clone is built using - Angular,
+                Material-UI, Context-API, Javascript - HTML, CSS,
+                Bootstrap
+              </p>
+              <div class="showProjects-btn">
+                <a href="https://clone-126e7.web.app">
+                  <button class="projectDemo-btn">Demo</button>
+                </a>
+                <a href="https://github.com/Birsinghjangra/Google-Clone">
+                  <button class="projectGit-btn">
+                    <i class="fab fa-github"></i>Github
+                  </button>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="mySlides">
+          <div class="numbertext">2 / 4</div>
+
+          <div class="project-photo">
+            <!-- <div class="project-photo-sub"> -->
+            <div href="https://todobanao.netlify.app">
+              <img class="demo" src="images/Project1.PNG" alt="Project1" />
+            </div>
+            <!-- </div> -->
+          </div>
+          <div class="project-desc" id="toDoApp">
+            <div class="project-desc-sub">
+              <h2><b>To Do App</b></h2>
+              <br>
+              ToDo App is simple and awesome app to organize your tasks with
+              very easy to use interface. ToDo can help you to make list of
+              your tasks to be reviwed at any time. We believe that we only
+              focus on our Today and Tomorrow tasks, which is most
+              important. So we made user interface like that so that it can
+              give you a quick view on your day timeline.
+              <br /><br />
+              <b>Functions :</b>
+              - Add your task as a list. - Add unlimited Categories to
+              organize your work - Modify your Task Heading / Descriptions -
+              Share it with other friends / Family. - Check your Done tasks
+              and you can restore them back or delete permanently.
+              <br /><br />
+              ToDo App is built using - Angular, Javascript - HTML, CSS,
+              Bootstrap
+              </br>
+              <div class="showProjects-btn">
+                <a href="https://todobanao.netlify.app">
+                  <button class="projectDemo-btn">Demo</button>
+                </a>
+                <a href="https://github.com/Birsinghjangra/ToDoList">
+                  <button class="projectGit-btn">
+                    <i class="fab fa-github"></i>Github
+                  </button>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="mySlides">
+          <div class="numbertext">3 / 4</div>
+
+          <section class="project-photo">
+            <!-- <div class="project-photo-sub"> -->
+            <a href="https://angularexpensecalculator.netlify.app/">
+              <img class="demo" src="images/Project2.PNG" alt="Project2" />
+            </a>
+            <!-- </div> -->
+          </section>
+          <section class="project-desc" id="kharchaBook">
+            <div class="project-desc-sub">
+              <h2><b>KharchaBook</b></h2>
+              <p>
+                Tracking your spending is often the first step in getting your
+                finances in order. By understanding what you spend money on
+                and how much you spend, you can see exactly where your cash is
+                going and areas where you can cut back.It’s easy to make this
+                part of your everyday routine thanks to expense tracker apps
+                that help you manage your money on the go. <br /><br />
+
+                <br /><br />
+                KharchaBook App is built using - Javascript - HTML, CSS,
+                Bootstrap
+              </p>
+              <div class="showProjects-btn">
+                <a href="https://angularexpensecalculator.netlify.app/">
+                  <button class="projectDemo-btn">Demo</button>
+                </a>
+                <a href="https://github.com/Birsinghjangra/Expense-Calculator">
+                  <button class="projectGit-btn">
+                    <i class="fab fa-github"></i>Github
+                  </button>
+                </a>
+              </div>
+            </div>
+          </section>
+        </div>
+
+        <div class="mySlides">
+          <div class="numbertext">4 / 4</div>
+
+          <section class="project-photo">
+            <!-- <div class="project-photo-sub"> -->
+            <a href="https://reactweatherforecast.netlify.app/">
+              <img class="demo" src="images/Project3.PNG" alt="Project3" />
+              </img>
+              <!-- </div> -->
+          </section>
+          <section class="project-desc" id="weatherForecast">
+            <div class="project-desc-sub">
+              <h2><b>Weather Forecast</b></h2>
+              <p>
+                The Weather Forecast App is a web application that provides real-time weather information. The
+                application allows users to view the current weather conditions of any city worldwide by simply entering
+                the city's name. Additionally, users can access a 5-day forecast to plan their activities accordingly.
+                This project showcases my proficiency in frontend development with React, backend development using
+                Node.js, and API integration to provide real-time weather data. It demonstrates my ability to create
+                user-friendly and interactive applications that fetch and display relevant information dynamically based
+                on user input.
+                <br /><br />
+                Weather Forecast Website is built using - React, Redux, NodeJs, Javascript
+                - HTML, CSS, Bootstrap
+              </p>
+              <div class="showProjects-btn">
+                <a href="https://reactweatherforecast.netlify.app/">
+                  <button class="projectDemo-btn">Demo</button>
+                </a>
+                <a href="https://github.com/Birsinghjangra/weather-forecast">
+                  <button class="projectGit-btn">
+                    <i class="fab fa-github"></i>Github
+                  </button>
+                </a>
+              </div>
+            </div>
+          </section>
+        </div>
+
+        <a class="prev" onclick="plusSlides(-1)">❮</a>
+        <a class="next" onclick="plusSlides(1)">❯</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact-section -->
+  <section class="contact_nav" id="contact_nav">
+    <div class="contact-content" id="contact">
+      <h1 class="lg-heading secondary">
+        Contact <span style="color: #fff">me</span>
+      </h1>
+      <h2 class="sm-heading" style="color: black">
+        Please feel free to reach me at...
+      </h2>
+      <div class="boxes">
+        <div class="contact-photo">
+          <img src="images/contact1.gif" alt="contact" />
+        </div>
+
+        <div class="contact-desc">
+          <div class="desc-size">
+            <p style="color: black">
+              <b>Get In Touch
+                <i class="fas fa-paper-plane" style="color: black"></i></b>
+            </p>
+          </div>
+          <div class="desc-size">
+            <i class="fa fa-envelope" aria-hidden="true" style="color: red"></i><a
+              href="mailto:birsinghjangra@gmail.com"><span> : <u>Bir Singh Jangra</u></span></a>
+          </div>
+          <div class="desc-size">
+            <i class="fas fa-mobile-alt" aria-hidden="true" style="color: black"></i><span style="color: black"> :
+              +91-9871243086</span>
+          </div>
+          <div class="desc-size">
+            <i class="fab fa-linkedin" style="color: #287bbc"></i><a
+              href="https://www.linkedin.com/in/bir-singh-jangra/"> :
+              <u>Bir Singh Jangra</u></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer id="main-footer">No &copy; Copyright issues.</footer>
+
+  <script src="js/app.js"></script>
+</body>
+
+</html>
